@@ -1,12 +1,12 @@
-# Conciso
-
-## Note for my self
+## Info
+Der Angular Starter dient als Einführung in das Framework Angular und zur schrittweisen Anleitung von Frontend Implementierungen
 
 ### Generate new Angular App
 npx nx g @nrwl/angular:application {{applicationName}} --directory=apps/{{directory => probably the applicationName}} 
 
 ### Generate new Component for specific Angular app
-npx nx g @nx/angular:component {{componentName}} --directory=apps/step0070/src/app/components/{{directory => probably the componentName}} --dry-run 
+npx nx g @nx/angular:component {{componentName}} --directory=apps/{{appName}}/src/app/components/{{directory => probably the componentName}}
+// --dry-run => changes wont be applied, check if it would run without error 
 
 ### Generate Lib for Nx
 npx nx g lib --name={LibName} --directory=libs/{typeOfLib}/{LibName} --dry-run
