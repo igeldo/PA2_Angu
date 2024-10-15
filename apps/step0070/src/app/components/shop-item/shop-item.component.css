@@ -1,0 +1,9 @@
+.button-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+::ng-deep .p-card-content, ::ng-deep .p-card-footer, ::ng-deep .p-card-footer {
+  padding: 0 0 0 0 !important;
+}

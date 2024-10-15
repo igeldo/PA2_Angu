@@ -1,0 +1,53 @@
+<span class="m-4">Bitte überprüfe deine Daten und deine Bestellung</span>
+<div class="flex justify-content-evenly h-20rem h-full mr-6 mt-3 ml-6">
+  <p-fieldset legend="Persönliche Informationen" class="w-3">
+    <form [formGroup]="userFormGroup" class="w-full flex flex-column gap-2">
+      <div class="flex flex-column gap-2">
+        <label>Vorname</label>
+        <input
+            formControlName="vorname"
+            pInputText 
+            aria-describedby="username-help"/>
+      </div>
+      <div class="flex flex-column gap-2">
+        <label>Nachname</label>
+        <input
+            formControlName="name"
+            pInputText 
+            aria-describedby="username-help"/>
+      </div>
+    </form>
+  </p-fieldset>
+
+  <p-fieldset legend="Adress Informationen" class="w-3">
+    <form [formGroup]="addressFormGroup" class="w-full flex flex-column gap-2">
+      <div class="flex flex-column gap-2">
+        <label>Straße</label>
+        <input
+            formControlName="strasse"
+            pInputText 
+            aria-describedby="username-help"/>
+      </div>
+      <div class="flex flex-column gap-2">
+        <label>Postleitzahl</label>
+        <input
+            formControlName="plz"
+            pInputText 
+            aria-describedby="username-help"/>
+      </div>
+      <div class="flex flex-column gap-2">
+        <label>Ort</label>
+        <input
+            formControlName="ort"
+            pInputText 
+            aria-describedby="username-help"/>
+      </div>
+    </form>
+  </p-fieldset>
+
+  <p-divider layout="vertical" class="w-1"/>
+
+  <div class="w-4">
+    <app-shopping-cart [showDeleteBtns]="false" [cartItems]="cartList()"></app-shopping-cart>
+  </div>
+</div>

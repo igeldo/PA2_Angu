@@ -1,0 +1,12 @@
+<div class="flex m-8">
+  <div class="grid grid-nogutter gap-5 w-full">
+    @for (item of items; track item.name) {
+        <app-shop-item
+          class="relative flex border-round max-w-16rem"
+          [item]="item"
+          (addToCartEvent)="addToCart($event)"
+          test-id="shop-item">
+        </app-shop-item>
+    }
+  </div>
+</div>

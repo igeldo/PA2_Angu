@@ -1,0 +1,9 @@
+<app-header
+  class="flex justify-content-between align-items-end h-4rem w-full"
+  [itemsLength]="cartList().length"
+  [cartList]="cartList()"
+></app-header>
+
+<p-divider></p-divider>
+
+<router-outlet></router-outlet>

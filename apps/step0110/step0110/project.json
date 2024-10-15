@@ -1,0 +1,77 @@
+{
+  "name": "step0110",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/step0110/step0110/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/step0110/step0110",
+        "index": "apps/step0110/step0110/src/index.html",
+        "main": "apps/step0110/step0110/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/step0110/step0110/tsconfig.app.json",
+        "assets": [
+          "apps/step0110/step0110/src/favicon.ico",
+          "apps/step0110/step0110/src/assets"
+        ],
+        "styles": ["apps/step0110/step0110/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "step0110:build:production"
+        },
+        "development": {
+          "buildTarget": "step0110:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "step0110:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "command": "npx nx e2e step0110-e2e --workers 4"
+    }
+  }
+}

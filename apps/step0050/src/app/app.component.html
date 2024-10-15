@@ -1,0 +1,22 @@
+<div class="flex justify-content-center align-items-center h-5rem m-0 w-full">
+  <img class="h-2rem" src="/assets/conciso.png">
+</div>
+<div class="grid nested-grid mt-3 pl-8 justify-content-center">
+  <!-- For-Loop -->
+  @for(item of items; track item.name; let index = $index) {
+    <app-shop-item 
+      class="col-2 cursor-pointer"
+      [position]="index"
+      [item]="item"
+      (addToBillEvent)="addToBill(item.price)"
+    ></app-shop-item>
+  } @empty {
+    <span> Es sind gerade keine Waren auf Lager </span>
+  }
+  
+  <!-- Async-Pipe wartet auf Werte von asyncronen Variablen / Funktionen -->
+  <app-total-bill 
+    class="flex flex-column col-12 mt-8 justify-content-center align-items-center" 
+    [amount]="totalBill$ | async">
+  </app-total-bill>
+</div>

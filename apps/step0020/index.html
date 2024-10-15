@@ -1,0 +1,52 @@
+<!-- Kommentare funktionieren in dieser Syntax -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step0020 - Angular Starter</title>
+  </head>
+  <body>
+    <!-- Grundlegende Elemente -->
+    <h1>Überschrift: Größere Darstellung von Text</h1>
+
+    <!-- CSS- Klassen für Style-Anpassungen -->
+    <span class="red-text">Textdarstellung</span>
+
+    <button onclick="showAlert()">Knopf zur Interaktion</button>
+
+    <div id="container">Container für Struktur</div>
+
+    <!-- placeholder ist ein Attribut und kann innerhalb des Tags gesetzt werden -->
+    <input placeholder="Tippe hier etwas ein...">
+  </body>
+
+  <script>
+    // Variable für die Alert Nachricht
+    alertMsg = "Die Methode funktioniert!";
+
+    /*
+    *  Diese Funktion löst einen Alert aus
+    */
+    function showAlert() {
+      alert(alertMsg);
+    }
+  </script>
+
+  <style>
+    /* Anwendung durch Klasse */
+    .red-text {
+      color: red;
+    }
+
+    /* Anwendung durch Tag-Name */
+    button {
+      font-size: xx-large;
+    }
+
+    /* Anwendung durch Id */
+    #container {
+      background-color: brown;
+    }
+  </style>
+</html>  

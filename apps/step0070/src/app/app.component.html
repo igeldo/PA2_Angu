@@ -1,0 +1,14 @@
+<app-header
+  class="flex justify-content-between align-items-end h-4rem w-full"
+  [itemsLength]="cartList().length"
+  [cartList]="cartList()"
+></app-header>
+
+<p-divider></p-divider>
+
+@if (!(showOrderView$ | async)) {
+  <app-shopping-view></app-shopping-view>
+}
+@else {
+  <app-order-view></app-order-view>
+}

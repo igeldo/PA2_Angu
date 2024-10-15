@@ -1,0 +1,16 @@
+/* styling here */
+
+/* Anwendung durch Klasse */
+.red-text {
+  color: red;
+}
+
+/* Anwendung durch Tag-Name */
+button {
+  font-size: xx-large;
+}
+
+/* Anwendung durch Id */
+#container {
+  background-color: brown;
+}

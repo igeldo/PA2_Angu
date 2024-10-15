@@ -1,0 +1,18 @@
+<div class="header">
+  <img src="/assets/conciso.png">
+</div>
+<div class="wrapper">
+  <!-- For-Loop -->
+  @for(item of items; track item.name; let index = $index) {
+    <app-shop-item 
+      [position]="index"
+      [item]="item"
+      (addToBillEvent)="addToBill(item.price)"
+    ></app-shop-item>
+  } @empty {
+    <span> Es sind gerade keine Waren auf Lager </span>
+  }
+  
+  <!-- Async-Pipe wartet auf Werte von asyncronen Variablen / Funktionen -->
+  <app-total-bill class="bill" [amount]="totalBill$ | async"></app-total-bill>
+</div>

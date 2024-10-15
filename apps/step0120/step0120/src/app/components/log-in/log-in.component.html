@@ -1,0 +1,41 @@
+<div class="flex flex-column justify-content-center align-items-center login-wrapper">
+
+  <p-dialog 
+    header="Anmeldung erforderlich" 
+    [modal]="true" 
+    [visible]="true" 
+    [closable]="false"
+    [draggable]="false"
+    [style]="{ width: '35rem'}"
+  >
+    <div class="flex flex-column align-items-center">
+      <div class="flex flex-column w-10 m-3">
+        <label>Username</label>
+        <input 
+          test-id="username-Input"
+          required="true" 
+          pInputText 
+          [(ngModel)]="username"
+          #usernameInput/>
+      </div>
+    
+      <div class="flex flex-column w-10 m-3">
+        <label>Passwort</label>
+        <input
+          test-id="passwort-Input"
+          required="true" 
+          pInputText type="password" 
+          [(ngModel)]="password"
+          #pswInput/>
+      </div>
+      <p-button 
+        test-id="login-btn"
+        label="Login"
+        (click)="login()"
+        [disabled]="!pswInput.validity.valid || !usernameInput.validity.valid"
+      />
+    </div>
+  </p-dialog>
+
+</div>
+

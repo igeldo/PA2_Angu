@@ -1,0 +1,18 @@
+:host ::ng-deep .loading-spinner .p-dialog-header {
+  display: flex;
+  background: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+}
+:host ::ng-deep .loading-spinner .p-dialog-content {
+  background: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+}
+:host ::ng-deep .loading-spinner .p-dialog-footer {
+  background: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+}
+
+:host ::ng-deep .loading-spinner .p-dialog {
+  background: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+}

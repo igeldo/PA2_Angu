@@ -1,0 +1,27 @@
+<p-scrollPanel class="w-full h-18rem">
+  @for (item of getItemsDistinct(); track $index) {
+    <div class="flex justify-content-between w-full h-4rem">
+      <div class="flex align-items-center">
+        <img [src]="item.src" class="w-2">
+        <span class="ml-4 w-2 custom-min-width font-semibold">{{item.name}}</span>
+        <span class="ml-4 w-2 custom-min-width">{{item.price}}€</span>
+  
+        @if (showDeleteBtns) {
+          <i class="pi pi-trash ml-6 cursor-pointer custom-min-width text-red-500 text-lg"
+          (click)="removeItem(item)">
+        </i>
+        }
+      </div>
+  
+      <div class="flex align-items-center">
+        <p-divider layout="vertical" />
+        <span class="w-1 custom-min-width">{{getNumberOfDuplicates(item)}}x</span>
+      </div>
+    </div>
+  }
+
+  <p-divider/>
+  <div class="flex justify-content-center">
+    <span>Ingesamt:  {{calculateAllAmount()}}€</span>
+  </div>
+</p-scrollPanel>

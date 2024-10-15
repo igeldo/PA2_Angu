@@ -1,0 +1,19 @@
+<div class="flex justify-content-center logo">
+  <img class="h-2rem" src="/assets/conciso.png">
+</div>
+<div class="flex justify-content-between align-items-center w-20rem min-width-320">
+  <p-button 
+    [badge]="itemsLength.toString()" 
+    [rounded]="true"
+    (click)="toggleCartVisibility()">
+    <i class="pi pi-shopping-cart"></i>
+  </p-button>
+  <p-dialog 
+    header="Warenkorb"
+    position="topright" 
+    [(visible)]="cartVisible" 
+    styleClass="w-26rem mt-8"
+    [draggable]="false">
+    <app-shopping-cart [cartItems]="cartList"></app-shopping-cart>
+  </p-dialog>
+</div>

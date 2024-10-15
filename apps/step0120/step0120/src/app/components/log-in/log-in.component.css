@@ -1,0 +1,12 @@
+.login-wrapper {
+  height: 85vh;
+}
+
+p-button{
+  margin: 1rem;
+  width: 90%;
+
+  button {
+    width: 100%;
+  }
+}

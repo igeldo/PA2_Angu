@@ -1,0 +1,10 @@
+<h1>
+  Ingesamter Rechnungsbetrag:
+</h1>
+<!-- ngClass kann css klassen Logik basiert einfügen -->
+<h1 class="billAmount" [ngClass]="amount! > 10 ? 'red' : ''">{{ amount ?? 0 }} €</h1>
+
+<!-- If-Block wird nur gerendert, solllte die Kondition erfüllt sein  -->
+@if(amount! > 10) {
+  <span>Das ist ziemlich teuer!</span>
+}

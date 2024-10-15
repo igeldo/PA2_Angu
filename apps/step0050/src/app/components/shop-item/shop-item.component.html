@@ -1,0 +1,11 @@
+<div 
+  class="relative flex flex-column justify-content-center align-items-center w-8 h-full hover:cursor-pointer hover:surface-400 border-round" 
+  (click)="addToBill()"
+>
+  <!-- Individuelle Klassen zur Realisierung von nicht definierten Eigenschaften (Bsp.: custom-top-right)  -->
+  <span class="absolute text-xl custom-top-right">{{ position != null ? position + 1 : null }}.</span>
+  <!-- Durch die Klammern wird das Value als Code interpretiert -->
+  <img class="max-w-6rem m-2" [src]="item?.src">
+  <span class="mt-1">{{ item?.name }}</span>
+  <span class="mt-1">{{ item?.price }} €</span>
+</div>

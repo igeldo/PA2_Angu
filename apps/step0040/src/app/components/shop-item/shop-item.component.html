@@ -1,0 +1,7 @@
+<div class="item" (click)="addToBill()">
+  <span class="position">{{ position != null ? position + 1 : null }}.</span>
+  <!-- Durch die Klammern wird das Value als Code interpretiert -->
+  <img [src]="item?.src">
+  <span>{{ item?.name }}</span>
+  <span>{{ item?.price }} €</span>
+</div>

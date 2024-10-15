@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*.ts", "../../../libs/auth/feature-login/src/lib/feature-login/log-in.component.ts", "../../../libs/auth/feature-login/src/lib/feature-login/log-in.component.spec.ts"],
+  "compilerOptions": {},
+  "exclude": ["jest.config.ts", "src/**/*.test.ts", "src/**/*.spec.ts"]
+}

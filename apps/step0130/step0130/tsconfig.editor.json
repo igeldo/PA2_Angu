@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*.ts", "../../../libs/utility/src/lib/order.service.ts", "../../../libs/utility/src/lib/router.service.ts", "../../../libs/utility/src/lib/shopping-cart.service.ts", "../../../libs/shared/util-router/src/lib/util-router.service/route.enumeration.ts", "../../../libs/shared/ui-shop-item/src/lib/ui-shop-item/shop-item.type.ts"],
+  "compilerOptions": {},
+  "exclude": ["jest.config.ts", "src/**/*.test.ts", "src/**/*.spec.ts"]
+}

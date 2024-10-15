@@ -1,0 +1,45 @@
+<p-stepper [linear]="true" class="flex w-11 h-30rem justify-content-center align-items-center m-7 mt-8">
+
+	<!-- Step 1 -->
+	<p-stepperPanel header="Persönliche Informationen" class="flex w-full">
+		<ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
+
+			<div class="flex">
+				<app-person-detail 
+					[userForm]="userForm"
+					[addressForm]="addressForm"
+					class="w-full h-full"></app-person-detail>
+			</div>
+
+			<div class="flex pt-4 justify-content-end">
+				<p-button 
+					[disabled]="userForm.invalid || addressForm.invalid" 
+					label="Weiter" 
+					icon="pi pi-arrow-right" 
+					iconPos="right"
+					(onClick)="handleStep(nextCallback, 'next')"
+					test-id="stepper-personal-information-next-button"/>
+			</div>
+		</ng-template>
+	</p-stepperPanel>
+
+	<!-- Step 2 -->
+	<p-stepperPanel header="Übersicht">
+		<ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
+			
+			<div class="flex">
+				<app-summary-view class="w-full h-full"></app-summary-view>
+			</div>
+
+			<div class="flex pt-4 justify-content-between">
+				<p-button label="Zurück" icon="pi pi-arrow-left" (onClick)="handleStep(prevCallback, 'back')" />
+				<p-button 
+					test-id="order-now-button" 
+					label="Bestellen" 
+					icon="pi pi-check-circle" 
+					iconPos="right" 
+					(onClick)="handleStep(nextCallback, 'finish')" />
+			</div>
+		</ng-template>
+	</p-stepperPanel>
+</p-stepper>

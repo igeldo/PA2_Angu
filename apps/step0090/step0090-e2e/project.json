@@ -1,0 +1,9 @@
+{
+  "name": "step0090-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/step0090/step0090-e2e/src",
+  "implicitDependencies": ["step0090"],
+  "// targets": "to see all targets run: nx show project step0090-e2e --web",
+  "targets": {}
+}

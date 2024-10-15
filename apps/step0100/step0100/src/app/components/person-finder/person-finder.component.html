@@ -1,0 +1,22 @@
+<p-inputNumber
+  [style]="{ 'text-align': 'center' }"
+  [size]="1"
+  class="mr-2"
+  mode="decimal"  
+  inputId="minmax-buttons" 
+  [min]="1" 
+  [max]="100"
+  placeholder="Id"
+  pTooltip="Suche nach einer Person mittels Id" 
+  tooltipPosition="left"
+  [formControl]="personIdControl"
+  test-id="person-id-input"/> 
+
+<p-button 
+  [rounded]="true" 
+  (onClick)="searchForPerson()"
+  test-id="person-search-btn">
+  <i class="pi pi-search"></i>
+</p-button>
+
+<p-toast position="top-center" />

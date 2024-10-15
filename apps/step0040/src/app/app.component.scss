@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  width: 90%;
+  img {
+    height: 3vh;
+  }
+}
+.wrapper {
+  display: grid;
+  margin-top: 5vh;
+  margin-left: 30%;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 20vh); 
+  grid-gap: 10px;
+}
+
+app-shop-item:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0, 0.3);
+}
+
+.bill {
+  justify-self: center;
+  align-self: center;
+  grid-column: 2;
+  grid-row: 3;
+}

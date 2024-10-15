@@ -1,0 +1,22 @@
+<p-card class="relative">
+  <ng-template pTemplate="subtitle" >
+    <p-image [preview]="true" class="border-round" width="150" height="150" [src]="item?.src"></p-image>
+  </ng-template>
+
+  <p-divider></p-divider>
+  <div class="flex justify-content-between align-items-center">
+    <span class="font-bold">{{ item?.name }}</span>
+    <span class="font-medium">{{ item?.price }}€</span>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <p-divider></p-divider>
+  </ng-template>
+</p-card>
+<p-button 
+  class="button-badge"
+  [rounded]="true" 
+  icon="pi pi-shopping-cart"
+  (click)="addToCart()"
+  test-id="add-to-cart-button">
+</p-button>

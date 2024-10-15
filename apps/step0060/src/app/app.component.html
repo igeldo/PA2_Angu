@@ -1,0 +1,22 @@
+<app-header
+  class="flex justify-content-between align-items-end h-4rem w-full"
+  [itemsLength]="(cartList$ | async)?.length ?? 0"
+  [cartList]="(cartList$ | async) ?? []"
+></app-header>
+
+<p-divider></p-divider>
+
+<div class="flex m-8">
+  <div class="grid grid-nogutter gap-5 w-full">
+    @for (item of items; track item.name) {
+        <app-shop-item
+          class="relative flex border-round max-w-16rem"
+          [item]="item"
+          (addToCartEvent)="addToCart($event)">
+        </app-shop-item>
+    }
+  </div>
+</div>
+
+
+  
